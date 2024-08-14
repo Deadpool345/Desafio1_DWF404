@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head>
+    <title>Tienda de Insumos Médicos</title>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+<h:body class="bg-[#F6F4EB]">
+    <header class="bg-[#91C8E4] py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Tienda de Insumos Médicos</h1>
+        </div>
+    </header>
+    <h:form>
+        <main class="container mx-auto p-[2rem]">
+            <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <h:panelGroup>
+                    <h:outputText value="No hay insumos disponibles en este momento." styleClass="text-red-500" rendered="#{empty insumosBean.insumos}"/>
+                    <ui:repeat value="#{insumosBean.insumos}" var="insumo">
+                        <div class="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md mt-[2rem]">
+                            <div class="text-center mt-[2rem]">
+                                <h:outputText value="#{insumo.nombre}" styleClass="text-lg font-semibold"/>
+                            </div>
+                            <h:graphicImage value="/img/#{insumo.imagen}" alt="#{insumo.nombre}" styleClass="h-30 object-cover" onerror="this.src='https://via.placeholder.com/150';"/>
+                            <div class="p-4 block items-center justify-items-center">
+                                <div>
+                                    <h:outputText value="#{insumo.descripcion}" styleClass="text-gray-600"/>
+                                </div>
+                                <div>
+                                    <h:outputText value="#{insumo.precio}" styleClass="text-blue-500 font-bold mt-2">
+                                        <f:convertNumber type="currency" currencySymbol="$"/>
+                                    </h:outputText>
+                                </div>
+                            </div>
+                        </div>
+                    </ui:repeat>
+                </h:panelGroup>
+            </section>
+        </main>
+    </h:form>
+    <div class="grid justify-items-center mb-[5rem]">
+        <div class="cursor-pointer text-center relative px-8 py-2 roMNhite isolation-auto z-10 border-2 border-[#91C8E4]
+        before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full  before:bg-[#91C8E4] before:-z-10  before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700" >
+            <h:outputLink value="/desafio-1.0-SNAPSHOT/api/insumos" >
+                Ver Datos JSON
+            </h:outputLink>
+        </div>
+    </div>
+    <footer class="bg-[#91C8E4] py-4">
+        <div class="container mx-auto text-center">
+            <p>&#169; 2024 Tienda de Insumos Médicos</p>
+            <p>Franklin Omar Pérez Rivera</p>
+            <p>Steve André Sánchez González</p>
+        </div>
+    </footer>
+</h:body>
+</html>

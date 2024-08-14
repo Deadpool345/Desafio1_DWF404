@@ -1,0 +1,54 @@
+[
+  {
+    "nombre": "Termómetro",
+    "imagen": "termometro.png",
+    "descripcion": "Termómetro digital",
+    "precio": 15.49
+  },
+
+  {
+    "nombre": "Bisturi",
+    "imagen": "bisturi.jpg",
+    "descripcion": "Bisturí para uso liviano.",
+    "precio": 3.90
+  },
+
+  {
+    "nombre": "Venda de Gasa 3 pulg. x 10",
+    "imagen": "gasa.jpg",
+    "descripcion": "Tejido tipo Raschel 100% algodón.",
+    "precio": 2.70
+  },
+
+  {
+    "nombre": "Mascarrilla",
+    "imagen": "mascarilla.jpg",
+    "descripcion": "Mascarilla desechable quirúrgica 50 pzas",
+    "precio": 2.50
+  },
+
+  {
+    "nombre": "Algodon 25 Gramos MIGASA",
+    "imagen": "algodon.jpg",
+    "descripcion": "Suave y absorbente para cuidado y limpieza personal.",
+    "precio": 0.90
+  },
+  {
+    "nombre": "Jeringa 22G",
+    "imagen": "jeringa.png",
+    "descripcion": "Jeringa de 10 ml con aguja 22G.",
+    "precio": 0.40
+  },
+  {
+    "nombre": "Esparadrapo 2 pulg x 10 Yardas 3M",
+    "imagen": "esparadrapo.png",
+    "descripcion": "Adhesivo hipoalergénico, no lastima la piel.",
+    "precio": 4.05
+  },
+  {
+    "nombre": "Alcohol Etilico 90° 120ML",
+    "imagen": "alcohol.jpg",
+    "descripcion": "Alcohol 90º PQ. Antiséptico.",
+    "precio": 15.49
+  }
+]
